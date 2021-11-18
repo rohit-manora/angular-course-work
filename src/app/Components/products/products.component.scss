@@ -1,0 +1,103 @@
+  
+  .filter-wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: end;
+    align-items: center;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .material-icons.active {
+    background: white !important;
+}
+
+select {
+    border: none;
+    outline: none;
+    border:2px solid black;
+}
+  
+  .list-view-button i,
+  .grid-view-button i{
+    background-color: #f1c22c;
+    border: 1px solid #f1c22c;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .list-view-button {
+    border-radius: 3px 0 0 3px;
+    border-right: 2px solid black;
+  }
+  
+
+  .price-filter-wrapper {
+    padding: 10px;
+    font-size: 16px;
+    height: 42 px;
+  }
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    background-color: #1f364d;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  
+  
+  .list.list-view-filter {
+    flex-direction: column;
+    flex-flow: wrap;
+  }
+  
+  .list.list-view-filter li {
+    width: calc(50% - 4%);
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .list.grid-view-filter {
+    flex-flow: row wrap;
+  }
+  
+  .list.grid-view-filter li {
+    width: calc(50% - 28%);
+    margin: 10px;
+    text-align: center;
+  }
+
+  mat-card {
+    height: 322px !important;
+    img {
+      width: 95px;
+      height: 105px;
+    }
+    .mat-card-content p {
+      font-size: 12px;
+      height: 35px;
+      overflow: scroll;
+    }
+    .mat-card-header .mat-card-title {
+      font-size: 15px;
+   }
+   .mat-card-header {
+    height: 85px !important;
+    overflow: scroll;
+   }
+  }
+

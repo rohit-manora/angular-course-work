@@ -1,0 +1,8 @@
+<div class="log-item">
+    <p style="margin: 2px;" *ngFor="let item of logsArray; let i=index">
+      <ng-container *ngIf="!(i === 0 && !resetClicked)">
+        {{item.event}} {{item.dateTime | date: 'medium'}}
+      </ng-container>
+    </p>
+
+  </div>

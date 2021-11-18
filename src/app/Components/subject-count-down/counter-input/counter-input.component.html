@@ -1,0 +1,18 @@
+<form #timerValueForm="ngForm" class="timer-value">
+    <div class="form-group" >
+      <label for="timerLimit" style="margin:5px">Enter Timer Limit:</label>
+      <input autofocus type="number" min=0 style="margin:5px"class="form-control" id="timerLimit" name="timerLimit" [(ngModel)]="model.timerLimit" (change)="ontimerLimitChange()"/>
+    </div>
+    <div class="m-2"> 
+      <button class="action-btn m-2" type="button" [disabled]="model.timerLimit === 0" (click)="onStartOrPause()">Start/Pause</button>
+      <button class="action-btn m-2" type="button" (click)="onReset()">Reset</button>
+    </div>
+  </form>
+
+  <div class="log-wrapper">
+    <p style="margin: 2px;" *ngFor="let item of pausedAtArray; let i=index">
+      <ng-container *ngIf="item">
+        Paused At {{item}}
+      </ng-container>
+    </p>
+  </div>

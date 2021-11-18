@@ -1,0 +1,25 @@
+<div class="black-border center p-2 m-2 ">
+    <div class="w-100 p-3">
+
+        <div class="time-wrapper">
+            <div class=" black-border center display-wrapper w-100 m-2">
+                <app-counter-display [resetClickEvent]="resetClickEvent" [startOrPauseClickEvent]="startOrPauseClickEvent"
+                [timerLimit]="timerLimit"></app-counter-display>
+            </div>
+            <div class=" black-border  input-wrapper w-100 m-2">
+                <app-counter-input (onStartOrPauseClick)="onStartOrPauseClick($event)" (onResetClick)="onResetClick($event)"
+                (timerLimit)="onTimerLimit($event)"></app-counter-input>
+            </div>
+        </div>
+        <div class="time-wrapper">
+
+            <div class="log-wrapper center w-100">
+                <app-counter-log [resetClickEvent]="resetClickEvent"  [startOrPauseClickEvent]="startOrPauseClickEvent"></app-counter-log>
+            </div>
+            <div class="status-wrapper center w-100">
+                <app-counter-operation-count [resetClickEvent]="resetClickEvent"  [startOrPauseClickEvent]="startOrPauseClickEvent" ></app-counter-operation-count>
+            </div>
+        </div>
+    </div> 
+    
+</div>

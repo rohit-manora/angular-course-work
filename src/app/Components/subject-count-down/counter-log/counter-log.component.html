@@ -1,0 +1,8 @@
+<div class="log-item">
+    <p style="margin: 2px;" *ngFor="let item of logs; let i=index">
+      <ng-container *ngIf="item.eventLog">
+        {{item.eventLog}} {{item.dateTime | date:'medium'}}
+      </ng-container>
+    </p>
+
+  </div>

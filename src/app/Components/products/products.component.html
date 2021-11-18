@@ -1,0 +1,34 @@
+<div class="filter-wrapper">
+  <div class="list-view-button"><a href="javascript:void(0)" (click)="listView()"><i class="material-icons"
+        [ngClass]="{'active': isListView}">list</i> </a></div>
+  <div class="grid-view-button"><a href="javascript:void(0)" (click)="gridView()"><i class="material-icons"
+        [ngClass]="{'active': isGridView}">grid_on</i> </a></div>
+  <span class="price-filter-wrapper">
+    <label for="price-filter"> </label>
+    <select id="price-filter" (change)="onPriceFilterChange($event.target)">
+      <option value="Asc">Price: Low to High</option>
+      <option value="Desc">Price: High to Low</option>
+    </select>
+  </span>
+</div>
+
+<ol class="list " [ngClass]="{'list-view-filter': isListView, 'grid-view-filter': isGridView}">
+
+  <li *ngFor="let item of productList">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>{{item.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{item.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <h4>{{item.price | currency}}</h4>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+</ol>
